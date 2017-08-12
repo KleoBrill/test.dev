@@ -1,1 +1,1 @@
-Live version on [Github pages](https://thekotiks.github.io/affiliate-dev/).
+Live version on [Github pages](https://thekotiks.github.io/test.dev/).
