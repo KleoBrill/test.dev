@@ -11,10 +11,12 @@ $(document).ready(function() {
 		}
 	});
 
-	$('.menu-toggle').on('click', function() {
-		var wrap = $(this).parent();
+	setTimeout(function() {
+		slider.redrawSlider();
+	}, 150);
 
-		wrap.toggleClass('active').find('ul.menu').on('mouseleave', function() {
+	$('.menu-toggle').on('click', function() {
+		$(this).parent().toggleClass('active').find('ul.menu').on('mouseleave', function() {
 			$(this).off('mouseleave').parent().toggleClass('active');
 		});
 	});
