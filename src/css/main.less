@@ -209,6 +209,31 @@
 			}
 		}
 	}
+	>.blocks {
+		display: flex;
+		flex-grow: 2;
+		height: 150px;
+		padding: 0px 30px;
+		> div[class^='block'] {
+			flex: 1;
+			text-align: center;
+			font-size: 33px;
+			color: @gray-bold;
+			padding-top: 5%;
+
+			&.block-red {
+				background: #e74c3c;
+			}
+			&.block-green {
+				background: #2ecc71;
+				flex-grow: 2;
+				margin: 0px 8%;
+			}
+			&.block-blue {
+				background:#3498bd;
+			}
+		}
+	}
 	.bx-wrapper {
 		box-shadow: none;
 		margin: 39px 0 85px 0;

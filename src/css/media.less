@@ -160,6 +160,11 @@
 		}
 	}
 	.main {
+		>.blocks {
+			> div[class^='block']{
+			padding-top: 11%;
+			}
+		}
 		ul.reviews {
 			> li {
 				padding: 0 70px;
@@ -215,6 +220,12 @@
 				&:not(:nth-of-type(2n + 1)) {
 					margin-left: 68px;
 				}
+			}
+		}
+		>.blocks {
+			> div[class^='block']{
+			font-size: 25px;
+			padding-top: 11%;
 			}
 		}
 		ul.reviews {
