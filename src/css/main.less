@@ -1,5 +1,16 @@
 @import 'mixins';
 @import 'colors';
+@keyframes bounce { 
+    0%, 50%, 100% {
+      background-position-y: 25px;
+    } 
+    25% {
+      background-position-y: 20px;
+    } 
+    75% {
+      background-position-y: 30px;
+    } 
+} 
 
 @width-page: 1199px;
 
@@ -218,7 +229,6 @@
 			font-size: 33px;
 			color: @gray-bold;
 			padding: 45px 0;
-
 			&.block-red {
 				background: #e74c3c;
 				border-top-left-radius: 5px;
@@ -235,7 +245,6 @@
 				background:#3498bd;
 				border-top-right-radius: 5px;
 				border-bottom-right-radius: 5px;
-
 			}
 		}
 	}
@@ -309,6 +318,8 @@ hr {
 		border-radius: 50%;
 		right: ~'calc(50% - 49px)';
 		bottom: -196px;
+		z-index: 999;
+		animation: bounce 3.5s infinite linear;
 	}
 	> h3 {
 		font-size: 25px;
@@ -370,7 +381,22 @@ hr {
 }
 .last {
 	background: @blue;
-	padding-bottom: 500px;
+	position: relative;
+	padding: 50px 0;
+	&:before {
+      z-index: 998;
+      content: '';
+      left: 0;
+      position: absolute;
+      width: 0;
+      height: 0;
+      bottom: 100%;
+      border-style: solid;
+      border-color: transparent #3498db transparent;
+      border-top-width: 130px;
+      border-bottom-width: 0;
+    }
+
 	> .footer {
 		.inner;
 		padding: 70px 0 0 0;

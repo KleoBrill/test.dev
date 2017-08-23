@@ -1,3 +1,4 @@
+$(window).on('resize', resizeTriangle);
 $(document).ready(function() {
 	var slider = $('ul.reviews').bxSlider({
 		pager: false,
@@ -12,6 +13,7 @@ $(document).ready(function() {
 	});
 
 	setTimeout(function() {
+		resizeTriangle();
 		slider.redrawSlider();
 	}, 150);
 
@@ -50,3 +52,12 @@ window.twttr = (function(d, s, id) {
 
   return t;
 }(document, "script", "twitter-wjs"));
+
+function resizeTriangle() {
+  var width = $('.content > .last').innerWidth() / 2;
+  
+  $('<style>.last:before{\
+    border-left-width: ' + width + 'px;\
+    border-right-width: ' + width + 'px;\
+  }</style>').appendTo('head');
+}
